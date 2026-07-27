@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "bilingual-ai"
+description = "BIlingual AI application."
+version = "0.0.0"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python"
+]
+authors = [
+    "daiha98 <daihafelipe@gmail.com>"
+]
+packages = [
+    { include = "*", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<3.14"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.0"
+pytest-cov = "^7.1.0"
+pytest-env = "^1.6.0"
+pytest-mock = "^3.10.0"
+pre-commit = "^4.6.0"
+black = ">=25.12,<27.0"
+sqlfluff = "^4.1.0"
+autoflake = "^2.2.1"
+flake8 = "^7.3.0"
+pylint = "^4.0.0"
+isort = "^8.0.0"
+mypy = ">=1.19,<3.0"
+bandit = "^1.7.1"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
